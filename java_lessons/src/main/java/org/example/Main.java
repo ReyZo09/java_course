@@ -1,24 +1,17 @@
 package org.example;
 
+
+
 public class Main {
+
     public static void main(String[] args) {
-        //String user = "Alexey";
-        //hello(user);
-        double l = 5;
-        System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
+        //Point a = new Point(11, 13);
+        //Point b = new Point(18.34, 36.11);
+        //System.out.println(Point.range(a, b));
 
-        double a = 4;
-        double b = 6;
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
     }
 
-    public static void hello(String somebody) {
-        System.out.println("Hello, " + somebody + "!");
-    }
-    public static double area(double length) {
-        return length*length;
-    }
-    public static double area (double a, double b){
-        return a * b;
-    }
+
+
+
 }

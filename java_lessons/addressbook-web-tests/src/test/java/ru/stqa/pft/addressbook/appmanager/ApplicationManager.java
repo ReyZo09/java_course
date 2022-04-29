@@ -1,15 +1,14 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.time.Duration;
 
-public class TestBase {
+public class ApplicationManager {
     ChromeDriver driver;
 
     public static boolean isAlertPresent(ChromeDriver driver) {
@@ -21,8 +20,7 @@ public class TestBase {
         }
     }
 
-    @BeforeMethod
-    public void setUp() throws Exception {
+    public void init() {
         System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
@@ -30,7 +28,7 @@ public class TestBase {
         login("admin","secret");    //логин и пароль для входа в систему
     }
 
-    private void login(String username, String password) {
+    public void login(String username, String password) {
         WebElement loginField = driver.findElement(By.name("user"));
         WebElement passField = driver.findElement(By.name("pass"));
         loginField.click();
@@ -42,15 +40,15 @@ public class TestBase {
         driver.findElement(By.xpath("//*[@id=\"LoginForm\"]/input[3]")).click();
     }
 
-    protected void returnToGroupPage() {
+    public void returnToGroupPage() {
         driver.findElement(By.linkText("group page")).click();
     }
 
-    protected void sumbitGroupCreation() {
+    public void sumbitGroupCreation() {
         driver.findElement(By.name("submit")).click();
     }
 
-    protected void fillGroupForm(GroupData groupData) {
+    public void fillGroupForm(GroupData groupData) {
         WebElement groupName = driver.findElement(By.name("group_name"));
         WebElement groupHeader = driver.findElement(By.name("group_header"));
         WebElement groupFooter = driver.findElement(By.name("group_footer"));
@@ -65,24 +63,23 @@ public class TestBase {
         groupFooter.sendKeys(groupData.footer());
     }
 
-    protected void initGroupCreation() {
+    public void initGroupCreation() {
         driver.findElement(By.name("new")).click();
     }
 
-    protected void goToGroupPage() {
+    public void goToGroupPage() {
         driver.findElement(By.linkText("groups")).click();
     }
 
-    @AfterMethod
-    public void tearDown() {
+    public void stop() {
         driver.quit();
     }
 
-    protected void deleteSelectedGroup() {
+    public void deleteSelectedGroup() {
         driver.findElement(By.name("delete")).click();
     }
 
-    protected void selectGroup() {
+    public void selectGroup() {
         driver.findElement(By.name("selected[]")).click();
     }
 }

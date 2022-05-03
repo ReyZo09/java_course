@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SessionHelper extends HelperBase{
 
     public SessionHelper(ChromeDriver driver) {
-
         super(driver);
     }
     public void login(String username, String password) {

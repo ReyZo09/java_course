@@ -14,7 +14,7 @@ public class GroupHelper extends HelperBase{
         clickElement(By.linkText("group page"));
     }
 
-    public void sumbitGroupCreation() {
+    public void submitGroupCreation() {
         clickElement(By.name("submit"));
     }
 
@@ -34,5 +34,13 @@ public class GroupHelper extends HelperBase{
 
     public void selectGroup() {
         clickElement(By.name("selected[]"));
+    }
+
+    public void initGroupModification() {
+        clickElement(By.name("edit"));
+    }
+
+    public void submitGroupModification() {
+        clickElement(By.name("update"));
     }
 }

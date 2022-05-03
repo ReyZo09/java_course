@@ -12,4 +12,5 @@ public class NavigationHelper extends HelperBase{
     public void goToGroupPage() {
         clickElement(By.linkText("groups"));
     }
+    public void goToAddNewUser() { clickElement(By.linkText("add new")); }
 }

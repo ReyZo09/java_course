@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.support.ui.Select;
 public class HelperBase {
     protected ChromeDriver driver;
 
@@ -21,6 +21,20 @@ public class HelperBase {
         clickElement(locator);
         element.clear();
         element.sendKeys(text);
+    }
+    protected void selectMenu(By locator, int select) {
+        Select selects = new Select(driver.findElement(locator));
+        selects.selectByIndex(select);
+    }
+    protected int MonthIntoIndex (String month) {
+        String [] months = {"-", "January" , "February" , "March" , "April", "May",
+                "June", "July", "August", "September", "October",
+                "November", "December"};
+        int i;
+        for (i = 0; i <= months.length; i++) {
+            if (months[i] == month) break;
+        }
+        return i;
     }
     public boolean isAlertPresent() {
         try {

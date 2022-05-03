@@ -8,6 +8,7 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
+    private UsersHelper usersHelper;
 
 
 
@@ -19,6 +20,7 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(driver);
         navigationHelper = new NavigationHelper(driver);
         sessionHelper = new SessionHelper(driver);
+        usersHelper = new UsersHelper(driver);
         sessionHelper.login("admin","secret");    //логин и пароль для входа в систему
     }
 
@@ -35,4 +37,5 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+    public UsersHelper getUsersHelper() { return usersHelper; }
 }

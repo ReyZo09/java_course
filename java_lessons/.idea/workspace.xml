@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ade86a4e-993c-427b-ad18-f7f4871983e3" name="Changes" comment="-2.8.2 Создан тест и вспомогательные классы для создания пользователей">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserDeletionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+    <list default="true" id="ade86a4e-993c-427b-ad18-f7f4871983e3" name="Changes" comment="-2.8.3 Создан тест и вспомогательные классы для удаления пользователей">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserModifyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/HelperBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/UsersHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/UsersHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserCreationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +66,7 @@
   </component>
   <component name="ProjectId" id="28MzIynXU2Kl1dlwh0OBoQYiQhR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -99,30 +97,7 @@
       <recent name="ru.stqa.pft.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserDeletionTest">
-    <configuration name="GroupModificationTests.testGroupModification" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook-web-tests:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.addressbook.tests.GroupModificationTests.testGroupModification&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.UserModifyTest.testUserModification">
     <configuration name="UserCreationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -146,7 +121,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserCreation.testUserCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserCreationTest.testUserCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +134,7 @@
           <list>
             <option value=":addressbook-web-tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.addressbook.tests.UserCreation.testUserCreation&quot;" />
+            <option value="&quot;ru.stqa.pft.addressbook.tests.UserCreationTest.testUserCreation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -215,13 +190,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UserModifyTest.testUserModification" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook-web-tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.addressbook.tests.UserModifyTest.testUserModification&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserModifyTest.testUserModification" />
+        <item itemvalue="Gradle.UserCreationTest.testUserCreation" />
         <item itemvalue="Gradle.UserDeletionTest" />
         <item itemvalue="Gradle.UserCreationTest" />
         <item itemvalue="Gradle.UserDeletionTest.testUserDeletion" />
-        <item itemvalue="Gradle.UserCreation.testUserCreation" />
-        <item itemvalue="Gradle.GroupModificationTests.testGroupModification" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651600244534</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-2.8.3 Создан тест и вспомогательные классы для удаления пользователей">
+      <created>1651754348556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1651754348556</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,6 +327,7 @@
     <MESSAGE value="-создан класс-помощник, содержащий все методы тестов&#10;-программа разделена на несколько пакетов" />
     <MESSAGE value="-2.8. Создан общий базовый класс для классов-помощников" />
     <MESSAGE value="-2.8.2 Создан тест и вспомогательные классы для создания пользователей" />
-    <option name="LAST_COMMIT_MESSAGE" value="-2.8.2 Создан тест и вспомогательные классы для создания пользователей" />
+    <MESSAGE value="-2.8.3 Создан тест и вспомогательные классы для удаления пользователей" />
+    <option name="LAST_COMMIT_MESSAGE" value="-2.8.3 Создан тест и вспомогательные классы для удаления пользователей" />
   </component>
 </project>

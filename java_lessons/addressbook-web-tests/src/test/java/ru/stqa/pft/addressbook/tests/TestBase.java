@@ -13,9 +13,9 @@ public class TestBase {
         app.init();
     }
 
-    //@AfterMethod
-    /*public void tearDown() {
+    @AfterMethod
+    public void tearDown() {
         app.stop();
-    }*/
+    }
 
 }

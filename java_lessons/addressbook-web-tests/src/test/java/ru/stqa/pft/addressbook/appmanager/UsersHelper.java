@@ -43,4 +43,10 @@ public class UsersHelper extends HelperBase{
     public void submitUserDeletion() {
         clickElement(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
     }
+    public void initUserModification() {
+        clickElement(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[8]/a"));
+    }
+    public void submitUserModification() {
+        clickElement(By.name("update"));
+    }
 }

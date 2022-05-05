@@ -36,12 +36,23 @@ public class HelperBase {
         }
         return i;
     }
+    public void alertAccept() {
+        driver.switchTo().alert().accept();
+    }
+    public void alertDismiss() {
+        driver.switchTo().alert().dismiss();
+    }
     public boolean isAlertPresent() {
         try {
             driver.switchTo().alert();
             return true;
         } catch (NoAlertPresentException e) {
             return false;
+        }
+    }
+    public void alertCheck() {
+        if (!isAlertPresent()) {
+            System.out.println("Alert window not found");
         }
     }
 }

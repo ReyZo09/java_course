@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ade86a4e-993c-427b-ad18-f7f4871983e3" name="Changes" comment="-2.8. Создан общий базовый класс для классов-помощников">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/UsersHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserCreation.java" afterDir="false" />
+    <list default="true" id="ade86a4e-993c-427b-ad18-f7f4871983e3" name="Changes" comment="-2.8.2 Создан тест и вспомогательные классы для создания пользователей">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserDeletionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/UsersHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/UsersHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/UserCreationTest.java" afterDir="false" />
     </list>
-    <list id="1e0b630c-3286-4743-b098-abcc2eb57af5" name="2.8" comment="2.8. Создан общий базовый класс для классов-помощников&#10;-Методы разделены на более мелкие методы(клик, type)" />
-    <list id="507271f2-9670-4e64-9378-bc83c2924b2a" name="2.8.1" comment="-добавлены тесты для модификации групп в соответствующем классе&#10;-отредактирован код" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,76 +99,7 @@
       <recent name="ru.stqa.pft.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserCreation.testUserCreation">
-    <configuration name="GroupCreationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook-web-tests:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.addressbook.GroupCreationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GroupCreationTest.GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook-web-tests:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.addressbook.GroupCreationTest.GroupCreationTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GroupDeletionTests.testGroupDeletion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook-web-tests:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.addressbook.GroupDeletionTests.testGroupDeletion&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.UserDeletionTest">
     <configuration name="GroupModificationTests.testGroupModification" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,6 +114,29 @@
             <option value=":addressbook-web-tests:test" />
             <option value="--tests" />
             <option value="&quot;ru.stqa.pft.addressbook.tests.GroupModificationTests.testGroupModification&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserCreationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook-web-tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.addressbook.tests.UserCreationTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,13 +169,59 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UserDeletionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook-web-tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.addressbook.tests.UserDeletionTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserDeletionTest.testUserDeletion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook-web-tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.addressbook.tests.UserDeletionTest.testUserDeletion&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserDeletionTest" />
+        <item itemvalue="Gradle.UserCreationTest" />
+        <item itemvalue="Gradle.UserDeletionTest.testUserDeletion" />
         <item itemvalue="Gradle.UserCreation.testUserCreation" />
         <item itemvalue="Gradle.GroupModificationTests.testGroupModification" />
-        <item itemvalue="Gradle.GroupDeletionTests.testGroupDeletion" />
-        <item itemvalue="Gradle.GroupCreationTest" />
-        <item itemvalue="Gradle.GroupCreationTest.GroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -231,8 +229,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ade86a4e-993c-427b-ad18-f7f4871983e3" name="Changes" comment="-отредактирован код" />
-      <changelist id="1e0b630c-3286-4743-b098-abcc2eb57af5" name="2.8" comment="2.8. Создан общий базовый класс для классов-помощников" />
-      <changelist id="507271f2-9670-4e64-9378-bc83c2924b2a" name="2.8.1" comment="-добавлены тесты для модификации групп в соответствующем классе&#10;-отредактирован код" />
       <created>1651041181798</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -294,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651592352001</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="-2.8.2 Создан тест и вспомогательные классы для создания пользователей">
+      <created>1651600244534</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1651600244534</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +321,7 @@
     <MESSAGE value="-создан отдельный класс TestBase для всех методов теста&#10;-создан тест удаления групп" />
     <MESSAGE value="-создан класс-помощник, содержащий все методы тестов&#10;-программа разделена на несколько пакетов" />
     <MESSAGE value="-2.8. Создан общий базовый класс для классов-помощников" />
-    <option name="LAST_COMMIT_MESSAGE" value="-2.8. Создан общий базовый класс для классов-помощников" />
+    <MESSAGE value="-2.8.2 Создан тест и вспомогательные классы для создания пользователей" />
+    <option name="LAST_COMMIT_MESSAGE" value="-2.8.2 Создан тест и вспомогательные классы для создания пользователей" />
   </component>
 </project>

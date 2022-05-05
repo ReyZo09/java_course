@@ -3,7 +3,7 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.annotations.Test;
 
 
-public class UserCreation extends TestBase {
+public class UserCreationTest extends TestBase {
     @Test
     public void testUserCreation() {
 

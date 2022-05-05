@@ -36,4 +36,11 @@ public class UsersHelper extends HelperBase{
     public void submitUserCreation() {
         clickElement(By.name("submit"));
     }
+
+    public void selectUser() {
+        clickElement(By.name("selected[]"));
+    }
+    public void submitUserDeletion() {
+        clickElement(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
+    }
 }

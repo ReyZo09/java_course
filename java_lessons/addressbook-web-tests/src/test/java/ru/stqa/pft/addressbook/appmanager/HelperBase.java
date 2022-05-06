@@ -20,8 +20,12 @@ public class HelperBase {
         WebElement element = driver.findElement(locator);
         clickElement(locator);
         if (text != null) {
-            element.clear();
-            element.sendKeys(text);
+            String existingText = element.getAttribute("value");
+            if (!text.equals(existingText)) {
+                element.clear();
+                element.sendKeys(text);
+            }
+
         }
     }
     protected void selectMenu(By locator, int select) {

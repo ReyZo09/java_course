@@ -2,13 +2,13 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 public class HelperBase {
-    protected ChromeDriver driver;
+    protected WebDriver driver;
 
-    public HelperBase(ChromeDriver driver) {
+    public HelperBase(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -19,8 +19,10 @@ public class HelperBase {
     protected void type(By locator, String text) {
         WebElement element = driver.findElement(locator);
         clickElement(locator);
-        element.clear();
-        element.sendKeys(text);
+        if (text != null) {
+            element.clear();
+            element.sendKeys(text);
+        }
     }
     protected void selectMenu(By locator, int select) {
         Select selects = new Select(driver.findElement(locator));

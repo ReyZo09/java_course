@@ -1,10 +1,10 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class UsersHelper extends HelperBase{
-    public UsersHelper(ChromeDriver driver) {
+    public UsersHelper(WebDriver driver) {
         super(driver);
     }
 

@@ -21,11 +21,11 @@ public class UsersHelper extends HelperBase{
         type(By.name("address"), address);
     }
     public void fillBirthDay(int day) {
-        selectMenu(By.name("bday"), day + 1);
+        selectMenuByIndex(By.name("bday"), day + 1);
     }
     public void fillBirthMonth(String month) {
         int monthIndex = MonthIntoIndex(month);
-        selectMenu(By.name("bmonth"), monthIndex);
+        selectMenuByIndex(By.name("bmonth"), monthIndex);
     }
     public void fillBirthYear(String year) {
         type(By.name("byear"), year);
@@ -48,5 +48,10 @@ public class UsersHelper extends HelperBase{
     }
     public void submitUserModification() {
         clickElement(By.name("update"));
+    }
+    public void fillGroupField(String text) {
+        if (isElementPresent(By.name("new_group"))) {
+            selectMenuByText(By.name("new_group"), text);
+        }
     }
 }

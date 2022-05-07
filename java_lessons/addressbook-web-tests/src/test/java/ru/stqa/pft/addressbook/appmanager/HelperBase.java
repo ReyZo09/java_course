@@ -1,9 +1,6 @@
 package ru.stqa.pft.addressbook.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 public class HelperBase {
     protected WebDriver driver;
@@ -28,9 +25,13 @@ public class HelperBase {
 
         }
     }
-    protected void selectMenu(By locator, int select) {
+    protected void selectMenuByIndex(By locator, int select) {
         Select selects = new Select(driver.findElement(locator));
         selects.selectByIndex(select);
+    }
+    protected void selectMenuByText(By locator, String text) {
+        Select selects = new Select(driver.findElement(locator));
+        selects.selectByVisibleText(text);
     }
     protected int MonthIntoIndex (String month) {
         String [] months = {"-", "January" , "February" , "March" , "April", "May",
@@ -48,7 +49,7 @@ public class HelperBase {
     public void alertDismiss() {
         driver.switchTo().alert().dismiss();
     }
-    public boolean isAlertPresent() {
+    private boolean isAlertPresent() {
         try {
             driver.switchTo().alert();
             return true;
@@ -59,6 +60,15 @@ public class HelperBase {
     public void alertCheck() {
         if (!isAlertPresent()) {
             System.out.println("Alert window not found");
+        }
+    }
+
+    protected boolean isElementPresent(By locator) {
+        try {
+            driver.findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return  false;
         }
     }
 }

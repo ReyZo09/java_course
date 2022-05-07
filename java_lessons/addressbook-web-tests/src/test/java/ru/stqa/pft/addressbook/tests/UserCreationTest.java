@@ -16,6 +16,8 @@ public class UserCreationTest extends TestBase {
         app.getUsersHelper().fillBirthDay(9);
         app.getUsersHelper().fillBirthMonth("January");
         app.getUsersHelper().fillBirthYear("1990");
+        app.getUsersHelper().fillGroupField("test1");
         app.getUsersHelper().submitUserCreation();
+        app.getNavigationHelper().goToHomePage();
     }
 }

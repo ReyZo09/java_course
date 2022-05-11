@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 public class UsersHelper extends HelperBase{
     public UsersHelper(WebDriver driver) {
@@ -53,5 +54,22 @@ public class UsersHelper extends HelperBase{
         if (isElementPresent(By.name("new_group"))) {
             selectMenuByText(By.name("new_group"), text);
         }
+    }
+
+    public void createUser() {
+        fillFirstName("Test");
+        fillMiddleName("Testovich");
+        fillLastName("Testov");
+        fillAddress("City, street, building 1, apt. 1");
+        fillEMail("test@test.test");
+        fillBirthDay(9);
+        fillBirthMonth("January");
+        fillBirthYear("1990");
+        fillGroupField("test1");
+        submitUserCreation();
+    }
+
+    public boolean isThereAUser() {
+        return isElementPresent(By.name("selected[]"));
     }
 }

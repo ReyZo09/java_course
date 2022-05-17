@@ -57,13 +57,13 @@ public class UsersHelper extends HelperBase{
     }
 
     public void createUser() {
-        fillFirstName("Test");
-        fillMiddleName("Testovich");
-        fillLastName("Testov");
+        fillFirstName("Test1");
+        fillMiddleName("Testovich1");
+        fillLastName("Testov1");
         fillAddress("City, street, building 1, apt. 1");
         fillEMail("test@test.test");
         fillBirthDay(9);
-        fillBirthMonth("January");
+        fillBirthMonth("February");
         fillBirthYear("1990");
         fillGroupField("test1");
         submitUserCreation();

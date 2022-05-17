@@ -2,6 +2,10 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class HelperBase {
     protected WebDriver driver;
 
@@ -37,6 +41,7 @@ public class HelperBase {
         String [] months = {"-", "January" , "February" , "March" , "April", "May",
                 "June", "July", "August", "September", "October",
                 "November", "December"};
+        List<WebElement> monthsList = driver.findElements(By.name("bmonth"));
         int i;
         for (i = 0; i <= months.length; i++) {
             if (months[i] == month) break;

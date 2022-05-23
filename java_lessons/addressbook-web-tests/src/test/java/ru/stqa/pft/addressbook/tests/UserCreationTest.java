@@ -5,7 +5,7 @@ import ru.stqa.pft.addressbook.model.GroupData;
 
 
 public class UserCreationTest extends TestBase {
-    @Test
+    @Test(enabled = false)
     public void testUserCreation() {
         app.getNavigationHelper().goToGroupPage();
         if (!app.getGroupHelper().isThereAGroup()) {

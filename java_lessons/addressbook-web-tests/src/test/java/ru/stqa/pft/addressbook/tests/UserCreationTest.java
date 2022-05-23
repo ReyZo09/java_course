@@ -8,8 +8,8 @@ public class UserCreationTest extends TestBase {
     @Test(enabled = false)
     public void testUserCreation() {
         app.getNavigationHelper().goToGroupPage();
-        if (!app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().createGroup(new GroupData("test1", "test2", "test3"));
+        if (!app.group().isThereAGroup()) {
+            app.group().create(new GroupData("test1", "test2", "test3"));
         }
         app.getNavigationHelper().goToAddNewUser();
         app.getUsersHelper().createUser();

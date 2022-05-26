@@ -6,15 +6,16 @@ import ru.stqa.pft.addressbook.model.GroupData;
 public class UserModifyTest extends TestBase {
     @Test(enabled = false)
     public void testUserModification() {
-        app.getNavigationHelper().goToGroupPage();
+        app.goTo().groupPage();
+        GroupData group = new GroupData().withName("test1").withHeader("test2").withFooter("test3");
         if (!app.group().isThereAGroup()) {
-            app.group().create(new GroupData("test1", "test2", "test3"));
+            app.group().create(group);
         }
-        app.getNavigationHelper().goToHomePage();
+        app.goTo().goToHomePage();
         if (!app.getUsersHelper().isThereAUser()) {
-            app.getNavigationHelper().goToAddNewUser();
+            app.goTo().goToAddNewUser();
             app.getUsersHelper().createUser();
-            app.getNavigationHelper().goToHomePage();
+            app.goTo().goToHomePage();
         }
         app.getUsersHelper().initUserModification();
         app.getUsersHelper().fillFirstName("TestModified");

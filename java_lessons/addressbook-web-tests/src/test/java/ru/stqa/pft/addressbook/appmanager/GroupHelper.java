@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
 
 import java.util.HashSet;
@@ -61,6 +62,7 @@ public class GroupHelper extends HelperBase{
         initGroupModification();
         fillGroupForm(group);   //данные, которыми заполнится форма группы
         submitGroupModification();
+        groupsCache = null;
         returnToGroupPage();
     }
 
@@ -72,20 +74,26 @@ public class GroupHelper extends HelperBase{
         return driver.findElements(By.name("selected[]")).size();
     }
 
-    public Set<GroupData> all() {
-        Set<GroupData> groups = new HashSet<>();
+    private Groups groupsCache = null;
+
+    public Groups all() {
+        if (groupsCache != null) {
+            return new Groups(groupsCache);
+        }
+        groupsCache = new Groups();
         List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements) {
             String name = element.getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            groups.add(new GroupData().withName(name).withId(id));
+            groupsCache.add(new GroupData().withName(name).withId(id));
         }
-        return groups;
+        return new Groups(groupsCache);
     }
 
     public void delete(GroupData group) {
         selectGroupById(group.getId());
         deleteSelectedGroup();
+        groupsCache = null;
         returnToGroupPage();
     }
 }
